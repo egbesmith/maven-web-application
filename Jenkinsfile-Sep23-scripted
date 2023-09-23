@@ -20,7 +20,7 @@ node{
         //edit settings.xml with nexus-user login credentials       
     }
     stage('5.Deploy2UAT'){
-        use deploy-to-container plugin via pipeline syntax
+        //use deploy-to-container plugin via pipeline syntax
         deploy adapters: [tomcat9(credentialsId: 'tomcatcredential', path: '', url: 'http://54.219.183.165:8080/')], contextPath: null, war: 'target/*war'
         //Deploying [/var/lib/jenkins/workspace/tesla-app-pipeline/target/tesla.war]
     }
