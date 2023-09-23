@@ -48,4 +48,3 @@ node{
 build and deployment status for my landmarktech
 Thanks''', recipientProviders: [contributor(), developers(), buildUser(), requestor()], subject: 'build and deployment status', to: 'egbeekolok@gmail.com'
     }
-} 
