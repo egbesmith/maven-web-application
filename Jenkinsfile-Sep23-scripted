@@ -33,7 +33,7 @@ node{
     stage('7.Deploy2Prod'){
       sh "echo 'Deploy application to the customers/production' " 
       //deploy adapters: [tomcat9(credentialsId: 'tomcatcredential', path: '', url: 'http://54.219.183.165:8080/')], contextPath: null, war: 'target/*war'
-         
+ 
     }
     stage('8.APM'){
         sh "echo 'monitoring and observation and alerting' "
