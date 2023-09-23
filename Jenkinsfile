@@ -31,18 +31,17 @@ pipeline{
     } 
     stage('8deploy2prod'){
       steps{
-        deploy adapters: [tomcat8(credentialsId: 'tomcat-credentials', path: '', url: 'http://35.170.249.131:8080/')], contextPath: null, war: 'target/*war'
+        deploy adapters: [tomcat8(credentialsId: 'tomcat-credentials', path: '', url: 'http://54.219.177.157:8080/')], contextPath: null, war: 'target/*war'
       }
     }
 }
   post{
     always{
-      emailext body: '''Hey guys
-Please check build status.
+      emailext body: '''hi team,
 
-Thanks
-Landmark 
-+1 437 215 2483''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'paypal-team@gmail.com'
+please check the build and development project
+
+thanks''', recipientProviders: [buildUser(), contributor(), developers(), requestor()], subject: 'build and development my project', to: 'egbeekolok@gmail.com'
     }
     success{
       emailext body: '''Hey guys
@@ -50,7 +49,7 @@ Good job build and deployment is successful.
 
 Thanks
 Landmark 
-+1 437 215 2483''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'paypal-team@gmail.com'
++1 437 215 2483''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'egbeekolok@gmail.com'
     } 
     failure{
       emailext body: '''Hey guys
@@ -58,7 +57,7 @@ Build failed. Please resolve issues.
 
 Thanks
 Landmark 
-+1 437 215 2483''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'paypal-team@gmail.com'
++1 437 215 2483''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'egbeekolok@gmail.com'
     }
   } 
   /*
