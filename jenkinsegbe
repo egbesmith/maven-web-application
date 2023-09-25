@@ -45,14 +45,11 @@ node{
         sh "echo 'notify the team for unusual accurances' "
         sh "echo 'notify the team if the applications are down' "
         sh "echo 'notify the team if the latency is higher that expected' "
-        emailext body: '''Hi Team,
+         emailext body: '''hi team,
 
-The build and Deployment status for tesla-app follows.
+please check the build and development project
 
-Regards,
-Landmark Technologies ''', recipientProviders: [buildUser(), contributor(), developers(), requestor()], subject: 'build and deployment status', to: 'mylandmarktech@gmail.com'
-
+thanks''', recipientProviders: [buildUser(), contributor(), developers(), requestor()], subject: 'build and development my project', to: 'egbeekolok@gmail.com'
     }
-
-*/ 
+/* 
 //  
